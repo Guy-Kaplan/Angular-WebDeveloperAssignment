@@ -1,0 +1,17 @@
+<img #preview width="150">
+<!-- *ngIf="preview.src!=''" -->
+<br>
+<div *ngFor="let p of pics | filter : top">
+    <h3>{{p.id}}</h3>
+    <h3>{{p.title}}</h3>
+    <app-thumbnail
+        source="{{p.thumbnailUrl}}"
+        width="50"
+        (enter)="preview.src=$event"
+        (leave)="preview.src=''">
+    </app-thumbnail>
+</div>
+<br>
+<button id="loadMore" mat-button (click)="loadMore()">Load more <mat-icon>add_circle_outline</mat-icon></button>
+<button id="loadLess" mat-button (click)="loadLess()">Load less <mat-icon>remove_circle_outline</mat-icon></button>
+<br>

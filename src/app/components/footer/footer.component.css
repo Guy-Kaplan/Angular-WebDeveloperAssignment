@@ -1,0 +1,12 @@
+h1{
+    color: darkred;
+    margin: 0;
+    /*font-size: 30px;*/
+}
+h1:hover{
+    color: white;
+    background-color: red;
+}
+h1::selection{
+    background-color: yellow;
+}
