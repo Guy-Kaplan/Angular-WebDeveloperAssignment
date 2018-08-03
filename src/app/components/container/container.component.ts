@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pic } from '../../models/pic';
 import { PicsService } from '../../services/pics.service';
-// import { Observable } from 'rxjs';
 
 @Component({
     selector: 'app-container',
@@ -18,10 +17,6 @@ export class ContainerComponent implements OnInit {
     ngOnInit() {
         this.picsService.getAllPics().subscribe((pics) => {
             this.pics = pics;
-            //console.log(this.pics);
-            // for (let i = 0; i < 5; i++) {
-            //     this.temp[i] = this.pics[i];
-            // }
         });
 
     }
@@ -33,7 +28,7 @@ export class ContainerComponent implements OnInit {
     }
 
     public loadLess(): void {
-        if (this.top!==0) {
+        if (this.top!==5) {
             this.top -= 5;
         }
     }
