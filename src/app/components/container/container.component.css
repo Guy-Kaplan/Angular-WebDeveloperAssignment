@@ -6,15 +6,21 @@ div{
     margin: 10px;
     padding: 10px;
     border: 1px solid black;
-    /* text-align: left; */
-}
-div:hover{
-    background-color: yellow;
+    width: 15%;
 }
 img{
     position: fixed;
     bottom: 60px;
     right: 20px;
+}
+#logo{
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    width: 50px;
+}
+span{
+    font-size: larger;
 }
 #loadMore{
     width: 300px;
@@ -31,4 +37,39 @@ img{
     position: fixed;
     bottom: 60px;
     left: 380px;
+}
+#showTop{
+    display: inline-block;
+    position: fixed;
+    top: 8px;
+    left: 10px;
+    margin: 10px;
+    padding: 10px;
+    padding-top: 15px;
+    border: 1px solid black;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    background-color: white;
+}
+#showTop:hover, #rangeDiv:hover{
+    background-color: blue;
+    color: white;
+}
+div:hover, #showTop::selection, #rangeDiv::selection, span::selection{
+    background-color: yellow;
+}
+#rangeDiv{
+    display: inline-block;
+    position: fixed;
+    top: 8px;
+    left: 150px;
+    margin: 10px;
+    padding: 10px;
+    padding-top: 15px;
+    border: 1px solid black;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    background-color: white;
 }
