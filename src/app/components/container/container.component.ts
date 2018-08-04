@@ -22,15 +22,27 @@ export class ContainerComponent implements OnInit {
     }
 
     public loadMore(): void {
-        if (this.top!==5000) {
+        if (this.top !== 500) {
             this.top += 5;
         }
     }
 
     public loadLess(): void {
-        if (this.top!==5) {
+        if (this.top !== 5) {
             this.top -= 5;
         }
+    }
+
+    public toMin(): void {
+        this.top = 5;
+    }
+
+    public toMax(): void {
+        this.top = 500;
+    }
+
+    public toMid(): void {
+        this.top = 250;
     }
 
 }
